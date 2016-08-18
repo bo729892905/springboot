@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: springboot
+  http:
+    encoding: { charset: UTF-8, enable: true, force: true }

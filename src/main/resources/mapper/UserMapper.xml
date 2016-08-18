@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.mapper.UserMapper">
+    <!-- 新建用户 -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.test.model.User">
+        insert into t_user
+        (id,username,password)
+        values
+        (#{id},#{username},#{password})
+    </insert>
+
+    <select id="getById" resultType="com.test.model.User">
+        select * from t_user where id = #{id}
+    </select>
+</mapper>
