@@ -20,7 +20,7 @@ public class SwaggerConfigurer extends WebMvcConfigurerAdapter {
     }
 
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler(new String[]{"/**"}).addResourceLocations(new String[]{"classpath:/static/"});
+        registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
         super.addResourceHandlers(registry);
     }
 
@@ -28,7 +28,7 @@ public class SwaggerConfigurer extends WebMvcConfigurerAdapter {
         SwaggerConfig config = ConfigFactory.config();
         config.setBasePath("/v1");
         config.setApiVersion("1.0.0");
-        config.setApiInfo(new ApiInfo(title, "<a href=\"/api\">" + description + "</a>", (String)null, (String)null, (String)null, (String)null));
+        config.setApiInfo(new ApiInfo(title, "<a href=\"/api\">" + description + "</a>", null, null, null, null));
         ScannerFactory.setScanner(new DefaultJaxrsScanner());
         ClassReaders.setReader(new JerseyApiReader());
     }

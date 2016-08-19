@@ -1,15 +1,9 @@
 package com.test.config;
 
-import com.wordnik.swagger.jersey.listing.ApiListingResource;
-import com.wordnik.swagger.jersey.listing.ApiListingResourceJSON;
-import com.wordnik.swagger.jersey.listing.JerseyApiDeclarationProvider;
-import com.wordnik.swagger.jersey.listing.JerseyResourceListingProvider;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.context.annotation.Configuration;
 
 import javax.ws.rs.ApplicationPath;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Created by ren.xiaobo on 2016/8/18.
