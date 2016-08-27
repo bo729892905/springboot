@@ -30,7 +30,7 @@ public class UserResource {
 
     @POST
     @Path("/save")
-    @ApiOperation(value = "保存用户", httpMethod = "GET", notes = "保存用户")
+    @ApiOperation(value = "保存用户", httpMethod = "POST", notes = "保存用户")
     public String hello(@ApiParam(value = "用户信息" ,required = true) @RequestBody User user) {
         logger.info("保存用户....");
         userService.insert(user);
