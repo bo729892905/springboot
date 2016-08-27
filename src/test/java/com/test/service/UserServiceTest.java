@@ -29,7 +29,7 @@ public class UserServiceTest {
     @Rollback(false)
     public void insert() throws Exception {
         User user = new User();
-        user.setId(3);
+        user.setId(1);
         user.setUsername("zhangsan");
         userMapper.insert(user);
         System.out.println("插入用户信息"+user.getUsername());
