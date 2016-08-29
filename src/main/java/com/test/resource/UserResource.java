@@ -31,7 +31,7 @@ public class UserResource {
     @POST
     @Path("/save")
     @ApiOperation(value = "保存用户", httpMethod = "POST", notes = "保存用户")
-    public String hello(@ApiParam(value = "用户信息" ,required = true) @RequestBody User user) {
+    public String saveUser(@ApiParam(value = "用户信息" ,required = true) @RequestBody User user) {
         logger.info("保存用户....");
         userService.insert(user);
         return "保存成功！";
@@ -40,7 +40,7 @@ public class UserResource {
     @GET
     @Path("/{id}")
     @ApiOperation(value = "根据id获取用户", httpMethod = "GET", notes = "根据id获取用户")
-    public @ResponseBody User user(@ApiParam(value = "用户id" ,required = true) @PathParam("id") long id) {
+    public @ResponseBody User getUser(@ApiParam(value = "用户id" ,required = true) @PathParam("id") long id) {
         return userService.getById(id);
     }
 }
