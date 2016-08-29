@@ -1,4 +1,7 @@
 buildscript {
+    ext{
+        springCloudVersion = "1.1.5.RELEASE"
+    }
     repositories {
         maven { url "http://repo.spring.io/libs-snapshot" }
         mavenCentral()
@@ -25,16 +28,13 @@ repositories {
     mavenCentral()
 }
 
-// Configuration中通过package扫描注册Provider，需要在此添加对应jar包
-/*springBoot {
-    requiresUnpack = ['com.wordnik:swagger-jersey2-jaxrs_2.10']
-}*/
-
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-web"
     compile "org.springframework.boot:spring-boot-starter-actuator"
     compile "org.springframework.boot:spring-boot-starter-aop"
     compile "org.springframework.boot:spring-boot-starter-jersey"
+    compile "org.springframework.cloud:spring-cloud-starter-eureka:${springCloudVersion}"
+    compile "org.springframework.cloud:spring-cloud-starter-feign:${springCloudVersion}"
 
     compile "mysql:mysql-connector-java"
     compile "org.mybatis.spring.boot:mybatis-spring-boot-starter:1.0.0"
