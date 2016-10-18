@@ -16,6 +16,5 @@ public class DruidAspect {
 
     @Before("druidStatPointcut()")
     public void validateAccount() {
-        System.out.println("==========================================================");
     }
 }

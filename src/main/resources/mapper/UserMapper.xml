@@ -12,4 +12,8 @@
     <select id="getById" resultType="com.test.model.User">
         select * from t_user where id = #{id}
     </select>
+
+    <select id="getUsers" resultType="com.test.model.User">
+        select * from t_user
+    </select>
 </mapper>

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import java.util.List;
 
 /**
  * Created by ren.xiaobo on 2016/8/16.
@@ -42,6 +43,13 @@ public class UserResource {
     @ApiOperation(value = "根据id获取用户", httpMethod = "GET", notes = "根据id获取用户")
     public @ResponseBody User getUser(@ApiParam(value = "用户id" ,required = true) @PathParam("id") long id) {
         return userService.getById(id);
+    }
+
+    @GET
+    @Path("/")
+    @ApiOperation(value = "获取用户列表", httpMethod = "GET", notes = "获取用户列表")
+    public List<User> getUsers() {
+        return userService.getUsers();
     }
 }
 

@@ -19,6 +19,6 @@ public class SwaggerServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.sendRedirect("/swagger/index.html");
+        resp.sendRedirect("swagger/index.html");
     }
 }

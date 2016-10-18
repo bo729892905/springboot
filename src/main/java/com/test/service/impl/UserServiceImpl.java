@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by ren.xiaobo on 2016/8/17.
@@ -28,5 +29,10 @@ public class UserServiceImpl  implements UserService {
     @Override
     public User getById(long id) {
         return userMapper.getById(id);
+    }
+
+    @Override
+    public List<User> getUsers() {
+        return userMapper.getUsers();
     }
 }
